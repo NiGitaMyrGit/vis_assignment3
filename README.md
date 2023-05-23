@@ -27,17 +27,24 @@ Your instructions for this assignment are short and simple:
 - The *image labels* are in the *metadata folder*, stored as *JSON files*. These can be read into ```pandas``` using ```read_json()```. You can find the documentation for that online.
 
 ## 3. Methods
+This script uses the pretrained CNN VGG16 to train a classifier on the dataset in order to perform immage classification. The model aims to be able to recognize and classify the different types of Indian Ethnic Clothes by providing the right class(label). 
+For this some data augmentation is done by using a ImageDataGenerator for creating batches of training, test and validation images, while automatically performing augmentation - nice!
+The tensorflow.keras library is used to fit the model and train it. A classification report and a plot of the history is produced and can (by default) be found in the folder `out`.
 
 # 4. Usage
 This script was made using python 3.10.7, make sure this is your python version you run the script in. 
 ### 4.1 Installing packages
 From the command line:
 Clone this repository to your console by running the command `git clone https://github.com/NiGitaMyrGit/vis_assignment3.git`. This will copy the repository to the location you are currently in.
-Then make sure you are located in the main folder, location can be changed by using the command `cd path\to\vis_assignment3`'. From here run the command `bash setup.sh` which will install all the required packages in order to run the script.
 
 ### 4.2 Dataset
 For downloading this dataset, the easiest is to go to the Indo fashion dataset by clicking this link: [Kaggle dataset](https://www.kaggle.com/datasets/validmodel/indo-fashion-dataset) and press the "Download" button in the top right corner.
 This will downlaod a zip-file called "archive.zip". Place this in the the 'in' folder and unzip it by typing the command `unzip archive.zip`
 ### 4.3 running the script
-
+Before running the script, make sure you are located in the main folder, location can be changed by using the command `cd path\to\vis_assignment3`'. From here run the command `bash setup.sh` which will install all the required packages in order to run the script.
+aftwerwards run the command `python3 src/vgg16_indofashion.py` which will run the script.
 ## 5. Results - discussion
+Since it takes so long to run over all the pictures in the dataset, I have not been able to fully train the model on the entire dataset. Instead I took a very small part og testsamples (n_testsamples = 75) though there is 7500 all in all
+and a small amount of trainsamples(n_train_samples = 911) though there is 91166 in total. 
+TFurthemore I set the epochs to 3 speed up the process. this should be much higher in order to get higher accuracy. 
+For that reason my results are poor, but if the model is run on the entire dataset and with a higher amount of epoch, it would definitely produce better results with higher accuracy scores 
