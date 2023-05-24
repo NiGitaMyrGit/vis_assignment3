@@ -1,0 +1,27 @@
+Classification report
+Data: Indo_fashion
+Model: VGG16
+Epochs: 3
+Learning rate: 0.01
+Batch size: 128
+                      precision    recall  f1-score   support
+
+              blouse       0.00      0.00      0.00       500
+         dhoti_pants       0.00      0.00      0.00       500
+            dupattas       0.00      0.00      0.00       500
+               gowns       0.00      0.00      0.00       500
+           kurta_men       0.00      0.00      0.00       500
+leggings_and_salwars       0.00      0.00      0.00       500
+             lehenga       0.00      0.00      0.00       500
+         mojaris_men       0.00      0.00      0.00       500
+       mojaris_women       0.00      0.00      0.00       500
+       nehru_jackets       0.00      0.00      0.00       500
+            palazzos       0.00      0.00      0.00       500
+          petticoats       0.00      0.00      0.00       500
+               saree       0.00      0.00      0.00       500
+           sherwanis       0.00      0.00      0.00       500
+         women_kurta       0.07      1.00      0.12       500
+
+            accuracy                           0.07      7500
+           macro avg       0.00      0.07      0.01      7500
+        weighted avg       0.00      0.07      0.01      7500
