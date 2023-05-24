@@ -44,7 +44,9 @@ This will downlaod a zip-file called "archive.zip". Place this in the the 'in' f
 Before running the script, make sure you are located in the main folder, location can be changed by using the command `cd path\to\vis_assignment3`'. From here run the command `bash setup.sh` which will install all the required packages in order to run the script.
 aftwerwards run the command `python3 src/vgg16_indofashion.py` which will run the script.
 ## 5. Results - discussion
-Since it takes so long to run over all the pictures in the dataset, I have not been able to fully train the model on the entire dataset. Instead I took a very small part og testsamples (n_testsamples = 75) though there is 7500 all in all
-and a small amount of trainsamples(n_train_samples = 911) though there is 91166 in total. 
+Unfortunately I cannot report the plot since I get a traceback say that `val_loss`is an invalid argument. I have tried troubleshooting after this [Stackoverflow]: (https://stackoverflow.com/questions/56847576/keyerror-val-loss-when-training-model) (and many other internet searches) and even though I treied implementing the suggested solutions little seems to work. It seems other people have had this problem as well, but it is unfortunate, since no plot is produced. 
+Alas a classification report was produced. It's important to note that the classification report reflects the script having been run on only a small subset of the data, due to the long runtime (and problems with out virtual machines). The n_testsamples was set to 75 out of 7500
+Since it takes so long to run over all the pictures in the dataset, I have not been able to fully train the model on the entire dataset. Instead I ran the script on only a subset of the data: testsamples (n_testsamples = 75) though there is 7500 all in alland a small amount of trainsamples(n_train_samples = 911) though there is 91166 in total. 
 TFurthemore I set the epochs to 3 speed up the process. this should be much higher in order to get higher accuracy. 
-For that reason my results are poor, but if the model is run on the entire dataset and with a higher amount of epoch, it would definitely produce better results with higher accuracy scores 
+For that reason my results are poor, but if the model is run on the entire dataset and with a higher amount of epochs, it would definitely produce better results with higher accuracy scores.
+
